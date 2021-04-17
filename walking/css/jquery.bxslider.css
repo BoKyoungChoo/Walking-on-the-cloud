@@ -1,0 +1,89 @@
+@charset "utf-8";
+/** VARIABLES
+===================================*/
+/** RESET AND LAYOUT
+===================================*/
+.bx-wrapper {
+  position: relative;
+  padding: 0;
+  margin-bottom: 60px;
+  height:98vh;
+}
+.bxslider {
+  margin: 0;
+  padding: 0;
+  /*fix flickering when used background-image instead of <img> (on Chrome)*/
+  -webkit-perspective: 1000;
+}
+ul.bxslider {
+  list-style: none;
+}
+.bx-viewport {
+  /* fix other elements on the page moving (in Chrome) */
+  -webkit-transform: translateZ(0);
+    max-height:666px;
+    top:31.34vh;
+}
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-wrapper .bx-prev {
+    right:330px;
+    background:url(../image/arrow_w_l.svg) no-repeat;
+    background-size:40px;
+    transition:0.2s;
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus {
+    text-indent:0px;
+    background:rgba(255, 255, 255, 0);
+    color:#fff;
+}
+.bx-wrapper .bx-next {
+    right:270px;
+    background:url(../image/arrow_w_r.svg) no-repeat;
+    background-size:40px;
+    transition:0.2s;
+}
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+    color:#fff;
+    background:rgba(238, 238, 238, 0);
+}
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  bottom: 4%;
+  outline: 0;
+  width:50px;
+  font-size:1.6rem;
+  color:rgba(255, 255, 255, 0);
+}
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+.bx-wrapper .bx-controls-auto {
+  position:absolute;
+  bottom:386px;
+  left:10.4vw;
+  width:20px;
+  z-index:1;
+}
+.bx-wrapper .bx-controls-auto .bx-start {
+  display: none;
+  width: 12px;
+  height: 12px;
+  text-indent:-9999px;
+  outline: 0;
+  background:url(../image/play_btn.svg) no-repeat;
+}
+.bx-wrapper .bx-controls-auto .bx-stop {
+  display: inline-block;
+  text-indent: -9999px;
+  width: 12px;
+  height: 12px;
+  outline: 0;
+  background:url(../image/pause_btn.svg) no-repeat;
+}
+.bx-pager{
+    display: none;
+}
